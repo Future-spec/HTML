@@ -1,2 +1,1905 @@
-<h1>Hello World !</h1>
-<h1>Everyone should know that parth is gay</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Eashan Khetmal — IT Student, Developer and Problem Solver">
+
+    <title>Eashan Khetmal | Developer Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #08090a;
+            color: #f3f1eb;
+            font-family: "DM Sans", sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        ::selection {
+            background: #e9ff68;
+            color: #08090a;
+        }
+
+        /* =========================
+           GLOBAL
+        ========================= */
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1150px, 90%);
+            margin: auto;
+        }
+
+        .accent {
+            color: #e9ff68;
+        }
+
+        .section-label {
+            color: #777873;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            height: 78px;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 5%;
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+            background: rgba(8,9,10,0.85);
+            backdrop-filter: blur(15px);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            font-family: "Space Grotesk";
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .logo-box {
+            width: 35px;
+            height: 35px;
+
+            background: #e9ff68;
+            color: #08090a;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 8px;
+
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #8c8b86;
+            font-size: 13px;
+            transition: 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: #e9ff68;
+        }
+
+        .nav-button {
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 9px 15px;
+            border-radius: 50px;
+
+            font-size: 12px;
+        }
+
+        .nav-button:hover {
+            border-color: #e9ff68;
+            color: #e9ff68;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: calc(100vh - 78px);
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            align-items: center;
+
+            gap: 50px;
+
+            padding: 80px 5%;
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        .eyebrow {
+            color: #999893;
+            font-family: "Space Grotesk";
+            font-size: 11px;
+            letter-spacing: 2px;
+
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            margin-bottom: 25px;
+        }
+
+        .dot {
+            width: 7px;
+            height: 7px;
+
+            background: #e9ff68;
+            border-radius: 50%;
+
+            box-shadow: 0 0 15px #e9ff68;
+        }
+
+        .hero h1 {
+            font-family: "Space Grotesk";
+            font-size: clamp(50px, 7vw, 90px);
+            line-height: 0.98;
+
+            letter-spacing: -4px;
+
+            font-weight: 600;
+        }
+
+        .hero h1 span {
+            color: #e9ff68;
+        }
+
+        .hero-description {
+            color: #92918c;
+            font-size: 17px;
+
+            max-width: 570px;
+
+            margin: 30px 0;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            padding: 13px 18px;
+
+            border-radius: 8px;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            transition: 0.25s;
+
+            display: inline-flex;
+            gap: 18px;
+            align-items: center;
+        }
+
+        .button-primary {
+            background: #e9ff68;
+            color: #08090a;
+        }
+
+        .button-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(233,255,104,0.2);
+        }
+
+        .button-secondary {
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .button-secondary:hover {
+            color: #e9ff68;
+            border-color: #e9ff68;
+        }
+
+        .stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .stat strong {
+            display: block;
+
+            font-family: "Space Grotesk";
+            font-size: 20px;
+        }
+
+        .stat small {
+            color: #64645f;
+            font-size: 10px;
+        }
+
+        /* =========================
+           CODE CARD
+        ========================= */
+
+        .hero-visual {
+            position: relative;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            min-height: 450px;
+        }
+
+        .code-card {
+            width: 460px;
+
+            background: #111214;
+
+            border: 1px solid rgba(255,255,255,0.1);
+
+            border-radius: 15px;
+
+            box-shadow: 0 40px 100px rgba(0,0,0,0.7);
+
+            transform: rotate(2deg);
+
+            overflow: hidden;
+
+            position: relative;
+            z-index: 2;
+        }
+
+        .window {
+            height: 45px;
+
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+
+            display: flex;
+            align-items: center;
+
+            padding: 0 15px;
+
+            gap: 7px;
+        }
+
+        .window span {
+            width: 7px;
+            height: 7px;
+
+            background: #3a3b3d;
+
+            border-radius: 50%;
+        }
+
+        .window small {
+            margin-left: auto;
+
+            color: #5d5e5b;
+
+            font-family: monospace;
+        }
+
+        pre {
+            padding: 30px;
+
+            color: #bdbeb9;
+
+            font-size: 14px;
+
+            line-height: 1.9;
+        }
+
+        .keyword {
+            color: #e9ff68;
+        }
+
+        .type {
+            color: #b9a7ff;
+        }
+
+        .string {
+            color: #82d7bb;
+        }
+
+        .floating {
+            position: absolute;
+
+            background: #17191b;
+
+            border: 1px solid rgba(255,255,255,0.12);
+
+            padding: 9px 13px;
+
+            border-radius: 8px;
+
+            font-size: 11px;
+
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+
+            z-index: 5;
+        }
+
+        .floating.one {
+            top: 18%;
+            left: 0;
+        }
+
+        .floating.two {
+            bottom: 15%;
+            right: 0;
+        }
+
+        /* =========================
+           MARQUEE
+        ========================= */
+
+        .marquee {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+
+            overflow: hidden;
+            white-space: nowrap;
+
+            padding: 18px 0;
+
+            color: #64645f;
+
+            font-family: "Space Grotesk";
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        .marquee-content {
+            animation: move 25s linear infinite;
+        }
+
+        .marquee span {
+            color: #e9ff68;
+            margin: 0 25px;
+        }
+
+        @keyframes move {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-30%);
+            }
+        }
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            padding: 120px 5%;
+        }
+
+        .section-title {
+            font-family: "Space Grotesk";
+
+            font-size: clamp(42px,5vw,68px);
+
+            line-height: 1;
+
+            letter-spacing: -3px;
+        }
+
+        .section-title span {
+            color: #e9ff68;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-grid {
+            max-width: 1150px;
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 80px;
+        }
+
+        .about-text p {
+            color: #85847f;
+
+            font-size: 15px;
+
+            margin-bottom: 18px;
+
+            max-width: 550px;
+        }
+
+        .about-text .lead {
+            color: #d0cec8;
+
+            font-size: 20px;
+
+            line-height: 1.5;
+        }
+
+        .pills {
+            display: flex;
+            gap: 8px;
+
+            flex-wrap: wrap;
+
+            margin-top: 30px;
+        }
+
+        .pill {
+            border: 1px solid rgba(255,255,255,0.1);
+
+            padding: 6px 11px;
+
+            border-radius: 50px;
+
+            font-size: 10px;
+
+            color: #888781;
+        }
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .section-header {
+            display: flex;
+
+            justify-content: space-between;
+            align-items: end;
+
+            margin-bottom: 45px;
+        }
+
+        .section-note {
+            color: #555650;
+            font-size: 11px;
+        }
+
+        .project-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 12px;
+        }
+
+        .project {
+            min-height: 330px;
+
+            background: #101113;
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+            border-radius: 13px;
+
+            padding: 28px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-6px);
+
+            border-color: rgba(233,255,104,0.35);
+        }
+
+        .project-top {
+            display: flex;
+
+            justify-content: space-between;
+        }
+
+        .project-number {
+            color: #e9ff68;
+
+            font-family: monospace;
+            font-size: 12px;
+        }
+
+        .project-type {
+            color: #64645f;
+
+            font-size: 10px;
+
+            letter-spacing: 1px;
+        }
+
+        .project h3 {
+            margin-top: auto;
+
+            font-family: "Space Grotesk";
+
+            font-size: 31px;
+
+            margin-bottom: 12px;
+        }
+
+        .project p {
+            color: #82817c;
+
+            font-size: 13px;
+        }
+
+        .project-bottom {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-top: 30px;
+        }
+
+        .tags {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .tags span {
+            border: 1px solid rgba(255,255,255,0.1);
+
+            border-radius: 50px;
+
+            padding: 5px 9px;
+
+            color: #777671;
+
+            font-size: 9px;
+        }
+
+        .project-link {
+            color: #d1cfc9;
+
+            font-size: 11px;
+        }
+
+        .project-link:hover {
+            color: #e9ff68;
+        }
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-section {
+            background: #0d0e10;
+        }
+
+        .skills-grid {
+            max-width: 1150px;
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 80px;
+        }
+
+        .skills-intro p {
+            color: #686761;
+
+            margin-top: 25px;
+        }
+
+        .skill-list {
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .skill {
+            display: grid;
+
+            grid-template-columns: 45px 1fr 1fr;
+
+            align-items: center;
+
+            padding: 20px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .skill-number {
+            color: #555650;
+
+            font-family: monospace;
+
+            font-size: 11px;
+        }
+
+        .skill-name {
+            font-family: "Space Grotesk";
+
+            font-size: 18px;
+        }
+
+        .skill-description {
+            text-align: right;
+
+            color: #66655f;
+
+            font-size: 11px;
+        }
+
+        /* =========================
+           JOURNEY
+        ========================= */
+
+        .journey-grid {
+            max-width: 1150px;
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 80px;
+        }
+
+        .journey-intro p {
+            color: #6f6e68;
+
+            margin-top: 25px;
+        }
+
+        .timeline {
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .timeline-item {
+            display: grid;
+
+            grid-template-columns: 90px 1fr;
+
+            gap: 20px;
+
+            padding: 25px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .timeline-label {
+            color: #e9ff68;
+
+            font-size: 10px;
+
+            letter-spacing: 1px;
+        }
+
+        .timeline h3 {
+            font-family: "Space Grotesk";
+
+            font-size: 17px;
+
+            font-weight: 500;
+
+            margin-bottom: 5px;
+        }
+
+        .timeline p {
+            color: #6e6d67;
+
+            font-size: 12px;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            border-top: 1px solid rgba(255,255,255,0.08);
+
+            background:
+                radial-gradient(
+                    circle at 70% 50%,
+                    rgba(233,255,104,0.08),
+                    transparent 35%
+                );
+        }
+
+        .contact-inner {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .contact h2 {
+            font-family: "Space Grotesk";
+
+            font-size: clamp(55px,8vw,100px);
+
+            line-height: 0.95;
+
+            letter-spacing: -4px;
+
+            margin-bottom: 25px;
+        }
+
+        .contact p {
+            color: #85847f;
+
+            max-width: 500px;
+
+            margin-bottom: 28px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            border-top: 1px solid rgba(255,255,255,0.08);
+
+            padding: 25px 5%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            color: #4e4d48;
+
+            font-size: 10px;
+        }
+
+        footer a:hover {
+            color: #e9ff68;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media(max-width:800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-button {
+                display: none;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+
+                padding-top: 60px;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .hero-visual {
+                min-height: 350px;
+            }
+
+            .code-card {
+                width: 100%;
+
+                transform: none;
+            }
+
+            .floating.one {
+                left: -5px;
+            }
+
+            .floating.two {
+                right: -5px;
+            }
+
+            .about-grid,
+            .skills-grid,
+            .journey-grid {
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header {
+                align-items: flex-start;
+
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            .skill {
+                grid-template-columns: 35px 1fr;
+            }
+
+            .skill-description {
+                display: none;
+            }
+
+            .contact h2 {
+                letter-spacing: -2px;
+            }
+
+            footer {
+                flex-wrap: wrap;
+
+                gap: 15px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav>
+
+    <a href="#home" class="logo">
+
+        <span class="logo-box">
+            EK
+        </span>
+
+        Eashan.
+
+    </a>
+
+
+    <div class="nav-links">
+
+        <a href="#about">About</a>
+
+        <a href="#projects">Work</a>
+
+        <a href="#skills">Skills</a>
+
+        <a href="#journey">Journey</a>
+
+        <a href="#contact">Contact</a>
+
+    </div>
+
+
+    <a href="#contact" class="nav-button">
+        Let's talk ↗
+    </a>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <div>
+
+        <div class="eyebrow">
+
+            <span class="dot"></span>
+
+            IT STUDENT · DEVELOPER · BUILDER
+
+        </div>
+
+
+        <h1>
+
+            Building things
+            <br>
+
+            <span>worth talking about.</span>
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            I'm Eashan, an Information Technology student who enjoys
+            turning ideas into useful software, solving problems with
+            code, and continuously learning how things work under the hood.
+
+        </p>
+
+
+        <div class="buttons">
+
+            <a href="#projects"
+               class="button button-primary">
+
+                Explore my work ↓
+
+            </a>
+
+
+            <a href="#contact"
+               class="button button-secondary">
+
+                Get in touch ↗
+
+            </a>
+
+        </div>
+
+
+        <div class="stats">
+
+            <div class="stat">
+
+                <strong>IT</strong>
+
+                <small>Engineering</small>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>Java</strong>
+
+                <small>Core language</small>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>DSA</strong>
+
+                <small>Problem solving</small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CODE CARD -->
+
+    <div class="hero-visual">
+
+        <div class="code-card">
+
+            <div class="window">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <small>
+                    developer.java
+                </small>
+
+            </div>
+
+
+<pre><code>
+<span class="keyword">class</span> <b>Developer</b> {
+
+  <span class="type">String</span> focus =
+      <span class="string">"build"</span>;
+
+  <span class="type">String</span> mindset =
+      <span class="string">"learn"</span>;
+
+
+  <span class="keyword">while</span> (curious) {
+
+      solve();
+
+      build();
+
+      improve();
+
+  }
+
+}
+</code></pre>
+
+        </div>
+
+
+        <div class="floating one">
+            ⌘ Clean Code
+        </div>
+
+        <div class="floating two">
+            ↗ Always Learning
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MARQUEE
+========================= -->
+
+<div class="marquee">
+
+    <div class="marquee-content">
+
+        JAVA
+
+        <span>✦</span>
+
+        C / C++
+
+        <span>✦</span>
+
+        PYTHON
+
+        <span>✦</span>
+
+        DSA
+
+        <span>✦</span>
+
+        WEB DEVELOPMENT
+
+        <span>✦</span>
+
+        PROBLEM SOLVING
+
+        <span>✦</span>
+
+        JAVA
+
+        <span>✦</span>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+    <div class="about-grid">
+
+        <div>
+
+            <div class="section-label">
+                01 / ABOUT
+            </div>
+
+
+            <h2 class="section-title">
+
+                Curious by default.
+                <br>
+
+                <span>Driven by progress.</span>
+
+            </h2>
+
+        </div>
+
+
+        <div class="about-text">
+
+            <p class="lead">
+
+                I'm currently pursuing Information Technology
+                engineering at Thakur College of Engineering &
+                Technology, Mumbai.
+
+            </p>
+
+
+            <p>
+
+                I like working at the intersection of logic and
+                creativity — from building Java applications and
+                C/C++ programs to practicing data structures and
+                algorithms.
+
+            </p>
+
+
+            <p>
+
+                My goal is simple: keep building, keep learning,
+                and become the kind of engineer who can take an
+                idea from a blank file to something people can
+                actually use.
+
+            </p>
+
+
+            <div class="pills">
+
+                <span class="pill">
+                    Problem Solver
+                </span>
+
+                <span class="pill">
+                    Fast Learner
+                </span>
+
+                <span class="pill">
+                    Builder
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects">
+
+    <div class="projects">
+
+        <div class="section-header">
+
+            <div>
+
+                <div class="section-label">
+                    02 / SELECTED WORK
+                </div>
+
+                <h2 class="section-title">
+
+                    Things I've
+                    <span>built.</span>
+
+                </h2>
+
+            </div>
+
+
+            <span class="section-note">
+                A growing collection
+            </span>
+
+        </div>
+
+
+        <div class="project-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <article class="project">
+
+                <div class="project-top">
+
+                    <span class="project-number">
+                        01
+                    </span>
+
+                    <span class="project-type">
+                        JAVA · APPLICATION
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Expense Tracker
+                </h3>
+
+
+                <p>
+
+                    A Java-based expense management application
+                    designed to make personal spending easier to
+                    record, organize and understand.
+
+                </p>
+
+
+                <div class="project-bottom">
+
+                    <div class="tags">
+
+                        <span>Java</span>
+
+                        <span>OOP</span>
+
+                        <span>File Handling</span>
+
+                    </div>
+
+
+                    <a href="#"
+                       class="project-link">
+
+                        View project ↗
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 2 -->
+
+            <article class="project">
+
+                <div class="project-top">
+
+                    <span class="project-number">
+                        02
+                    </span>
+
+                    <span class="project-type">
+                        PYTHON · SIMULATION
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Simple Bank Simulator
+                </h3>
+
+
+                <p>
+
+                    A console-based banking simulator demonstrating
+                    practical programming logic, transactions,
+                    validation and user interaction.
+
+                </p>
+
+
+                <div class="project-bottom">
+
+                    <div class="tags">
+
+                        <span>Python</span>
+
+                        <span>Logic</span>
+
+                    </div>
+
+
+                    <a href="#"
+                       class="project-link">
+
+                        View project ↗
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 3 -->
+
+            <article class="project">
+
+                <div class="project-top">
+
+                    <span class="project-number">
+                        03
+                    </span>
+
+                    <span class="project-type">
+                        JAVA · CLI
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Online Course Tracker
+                </h3>
+
+
+                <p>
+
+                    A lightweight Java application for managing
+                    course information and practicing compilation,
+                    packages and object-oriented design.
+
+                </p>
+
+
+                <div class="project-bottom">
+
+                    <div class="tags">
+
+                        <span>Java</span>
+
+                        <span>OOP</span>
+
+                        <span>CLI</span>
+
+                    </div>
+
+
+                    <a href="#"
+                       class="project-link">
+
+                        View project ↗
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 4 -->
+
+            <article class="project">
+
+                <div class="project-top">
+
+                    <span class="project-number">
+                        04
+                    </span>
+
+                    <span class="project-type">
+                        DSA · C++
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Algorithm Practice
+                </h3>
+
+
+                <p>
+
+                    Consistent practice across arrays, searching,
+                    sorting, greedy techniques and classic
+                    interview-style problems.
+
+                </p>
+
+
+                <div class="project-bottom">
+
+                    <div class="tags">
+
+                        <span>C++</span>
+
+                        <span>LeetCode</span>
+
+                        <span>DSA</span>
+
+                    </div>
+
+
+                    <a href="#"
+                       class="project-link">
+
+                        View profile ↗
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills"
+         class="skills-section">
+
+    <div class="skills-grid">
+
+        <div class="skills-intro">
+
+            <div class="section-label">
+                03 / TOOLKIT
+            </div>
+
+
+            <h2 class="section-title">
+
+                My current
+                <br>
+
+                <span>toolkit.</span>
+
+            </h2>
+
+
+            <p>
+
+                Technologies I'm using to learn,
+                build and solve problems.
+
+            </p>
+
+        </div>
+
+
+        <div class="skill-list">
+
+
+            <div class="skill">
+
+                <span class="skill-number">
+                    01
+                </span>
+
+                <span class="skill-name">
+                    Java
+                </span>
+
+                <span class="skill-description">
+                    OOP · Applications
+                </span>
+
+            </div>
+
+
+            <div class="skill">
+
+                <span class="skill-number">
+                    02
+                </span>
+
+                <span class="skill-name">
+                    C / C++
+                </span>
+
+                <span class="skill-description">
+                    DSA · Fundamentals
+                </span>
+
+            </div>
+
+
+            <div class="skill">
+
+                <span class="skill-number">
+                    03
+                </span>
+
+                <span class="skill-name">
+                    Python
+                </span>
+
+                <span class="skill-description">
+                    Programming · Automation
+                </span>
+
+            </div>
+
+
+            <div class="skill">
+
+                <span class="skill-number">
+                    04
+                </span>
+
+                <span class="skill-name">
+                    HTML / CSS / JS
+                </span>
+
+                <span class="skill-description">
+                    Web · Responsive UI
+                </span>
+
+            </div>
+
+
+            <div class="skill">
+
+                <span class="skill-number">
+                    05
+                </span>
+
+                <span class="skill-name">
+                    Git / GitHub
+                </span>
+
+                <span class="skill-description">
+                    Version control
+                </span>
+
+            </div>
+
+
+            <div class="skill">
+
+                <span class="skill-number">
+                    06
+                </span>
+
+                <span class="skill-name">
+                    Problem Solving
+                </span>
+
+                <span class="skill-description">
+                    Algorithms · Competitive practice
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     JOURNEY
+========================= -->
+
+<section id="journey">
+
+    <div class="journey-grid">
+
+        <div class="journey-intro">
+
+            <div class="section-label">
+                04 / JOURNEY
+            </div>
+
+
+            <h2 class="section-title">
+
+                Still early.
+                <br>
+
+                <span>Already moving.</span>
+
+            </h2>
+
+
+            <p>
+
+                Every project is a checkpoint —
+                not the finish line.
+
+            </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item">
+
+                <span class="timeline-label">
+                    NOW
+                </span>
+
+                <div>
+
+                    <h3>
+                        Information Technology Engineering
+                    </h3>
+
+                    <p>
+                        Thakur College of Engineering &
+                        Technology · Mumbai
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <span class="timeline-label">
+                    BUILDING
+                </span>
+
+                <div>
+
+                    <h3>
+                        Java · C++ · Python
+                    </h3>
+
+                    <p>
+                        Strengthening programming fundamentals
+                        through projects and hands-on practice.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <span class="timeline-label">
+                    FOCUS
+                </span>
+
+                <div>
+
+                    <h3>
+                        Data Structures & Algorithms
+                    </h3>
+
+                    <p>
+                        Regular problem solving with a focus
+                        on understanding patterns rather than
+                        memorizing solutions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact"
+         class="contact">
+
+    <div class="contact-inner">
+
+        <div class="section-label">
+            05 / CONTACT
+        </div>
+
+
+        <h2>
+
+            Have an idea?
+            <br>
+
+            <span class="accent">
+                Let's build it.
+            </span>
+
+        </h2>
+
+
+        <p>
+
+            I'm open to internships, collaborations,
+            interesting projects and conversations
+            about technology.
+
+        </p>
+
+
+        <div class="buttons">
+
+            <a href="mailto:eashankhetmal3@gmail.com"
+               class="button button-primary">
+
+                Email me ↗
+
+            </a>
+
+
+            <!-- CHANGE THESE LINKS -->
+
+            <a href="https://github.com/"
+               target="_blank"
+               class="button button-secondary">
+
+                GitHub ↗
+
+            </a>
+
+
+            <a href="https://linkedin.com/"
+               target="_blank"
+               class="button button-secondary">
+
+                LinkedIn ↗
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <span>
+        © 2026 Eashan Khetmal
+    </span>
+
+
+    <span>
+        Built with HTML, CSS & JavaScript.
+    </span>
+
+
+    <a href="#home">
+        Back to top ↑
+    </a>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+        link.addEventListener("click", function(event) {
+
+            const target =
+                document.querySelector(
+                    this.getAttribute("href")
+                );
+
+            if (target) {
+
+                event.preventDefault();
+
+                target.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            }
+
+        });
+
+    });
+
+
+    // Simple reveal animation
+    const observer =
+        new IntersectionObserver(
+            entries => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.style.opacity = "1";
+                        entry.target.style.transform =
+                            "translateY(0)";
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.15
+            }
+        );
+
+
+    document
+        .querySelectorAll(
+            ".project, .skill, .timeline-item"
+        )
+        .forEach(element => {
+
+            element.style.opacity = "0";
+
+            element.style.transform =
+                "translateY(20px)";
+
+            element.style.transition =
+                "opacity .6s ease, transform .6s ease";
+
+            observer.observe(element);
+
+        });
+
+</script>
+
+</body>
+</html>
